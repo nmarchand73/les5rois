@@ -45,8 +45,10 @@ ok('atout (valeur = atout de la manche) joue le rôle de joker', () => {
   assert.ok(L.checkMeld([C(4, 4, 1), C(0, 5, 2), C(4, 6, 3)], 5));      // le 5 d'étoile = atout
   assert.equal(L.checkMeld([C(4, 4, 1), C(0, 5, 2), C(4, 6, 3)], 9), null); // sinon non
 });
-ok('combinaison uniquement de jokers refusée (choix documenté)', () => {
-  assert.equal(L.checkMeld([J(1), J(2), J(3)], 5), null);
+ok('règlement : toute carte peut être remplacée -> 3 jokers/atouts seuls forment une combinaison', () => {
+  assert.ok(L.checkMeld([J(1), J(2), J(3)], 5));
+  assert.ok(L.checkMeld([J(1), C(0, 5, 2), C(1, 5, 3)], 5));
+  assert.equal(L.penalty([J(11), J(12), C(2, 5, 13)], 5), 0);
 });
 ok('orderMeld indique la valeur des jokers', () => {
   const o = L.orderMeld([C(4, 4, 1), J(2), C(4, 6, 3)], 99);
