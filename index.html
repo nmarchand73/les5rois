@@ -38,20 +38,10 @@ button{font:inherit;color:inherit}
   user-select:none;-webkit-user-select:none;cursor:default;
   transition:transform .16s ease,box-shadow .16s ease;
 }
-.s0{--suit:#d79a05}.s1{--suit:#1c2a4e}.s2{--suit:#d02b35}.s3{--suit:#2b87da}.s4{--suit:#2e9b4e}
-.card .corner{position:absolute;left:.26em;top:.18em;display:flex;flex-direction:column;align-items:center;line-height:1;
-  font-family:Georgia,"Times New Roman",serif;font-weight:800;font-size:1em}
-.card .corner .ico{width:.78em;height:.78em;margin-top:.1em}
-.card .corner.br{left:auto;top:auto;right:.26em;bottom:.18em;transform:rotate(180deg)}
-.card .mid{position:absolute;inset:0;display:grid;place-items:center}
-.card .mid .big{width:2.25em;height:2.25em;filter:drop-shadow(0 1px 0 rgba(255,255,255,.7))}
-.card .mid.face::before{content:"";position:absolute;width:2.9em;height:2.9em;border-radius:50%;
-  border:.07em solid var(--suit);opacity:.55;background:radial-gradient(circle,#fff6 0,transparent 70%)}
-.card .mid.face .big{width:1.5em;height:1.5em}
-.card .mid .crown{position:absolute;top:calc(50% - 2em);left:50%;width:1.35em;height:1.35em;transform:translateX(-50%);color:#d79a05;
-  filter:drop-shadow(0 1px 0 rgba(0,0,0,.25))}
-.card .mid .wm{position:absolute;font:800 3.4em/1 Georgia,"Times New Roman",serif;color:var(--suit);opacity:.09;pointer-events:none}
-.card .mid .crown.q{width:1.05em;height:1.05em;top:calc(50% - 1.75em)}
+.s0{--suit:#e3a400;--edge:#8a5a00;--rkc:#a87300}.s1{--suit:#1c2a4e;--edge:#0a1128}.s2{--suit:#d02b35;--edge:#8c1119}.s3{--suit:#2b87da;--edge:#154f8f}.s4{--suit:#2e9b4e;--edge:#17612e}
+.card .cf{position:absolute;inset:0;width:100%;height:100%;display:block;overflow:visible;border-radius:inherit}
+.cf .rk{font:800 23px Georgia,"Times New Roman",serif;fill:var(--rkc,var(--suit))}
+.cf .pip{fill:currentColor;stroke:var(--edge);stroke-width:.9;stroke-linejoin:round;paint-order:stroke fill}
 .card .okb{position:absolute;left:50%;top:-.62em;transform:translateX(-50%);z-index:3;min-width:1.5em;height:1.5em;border-radius:999px;display:grid;place-items:center;
   font:800 .62em/1 ui-sans-serif,system-ui,sans-serif;color:#06260f;background:linear-gradient(#9af0b4,#4cc77a);box-shadow:0 0 0 2px #0a3b1d,0 3px 8px #0008;animation:okpulse 1.4s ease-in-out infinite}
 @keyframes okpulse{50%{transform:translateX(-50%) scale(1.18)}}
@@ -60,16 +50,10 @@ button{font:inherit;color:inherit}
 .card.wild{box-shadow:0 0 0 2px var(--gold),0 0 0 3px rgba(60,35,0,.6),0 0 16px rgba(233,185,73,.65),0 3px 8px rgba(0,0,0,.4)}
 .card .rib{position:absolute;left:50%;bottom:.14em;transform:translateX(-50%);font:800 .34em/1 ui-sans-serif,system-ui,sans-serif;
   letter-spacing:.08em;color:#4a2e00;background:linear-gradient(#fbe08a,#e9b949);padding:.28em .6em;border-radius:999px;white-space:nowrap}
-.card.joker{--suit:#6c3fb8;background:linear-gradient(155deg,#fff 0%,#efe6ff 55%,#d9c8f6 100%)}
-.card.joker .mid .big{width:2.6em;height:2.6em;color:#7a46cc}
-.card.joker .jl{position:absolute;left:0;right:0;bottom:.5em;text-align:center;font:800 .36em/1 ui-sans-serif,system-ui,sans-serif;letter-spacing:.18em;color:#6c3fb8}
 .card .as{position:absolute;right:-.2em;top:-.35em;min-width:1.35em;height:1.35em;border-radius:999px;display:grid;place-items:center;
   font:800 .55em/1 ui-sans-serif,system-ui,sans-serif;color:#3a2600;background:var(--gold2);box-shadow:0 0 0 1.5px #7a5410,0 2px 4px #0006;padding:0 .3em;z-index:2}
-.card.back{background:radial-gradient(circle at 50% 38%,#8a46bd 0,#4b2279 52%,#2c1252 100%);
-  box-shadow:0 0 0 1px rgba(15,5,35,.7),0 0 0 .1em rgba(251,224,138,.55) inset,0 3px 8px rgba(0,0,0,.45)}
-.card.back::before{content:"";position:absolute;inset:.17em;border-radius:calc(var(--cw)*.07);border:.06em solid rgba(251,224,138,.55);
-  background:repeating-linear-gradient(45deg,rgba(255,255,255,.07) 0 .2em,transparent .2em .4em)}
-.card.back .ico{position:absolute;inset:0;margin:auto;width:1.7em;height:1.7em;color:var(--gold);filter:drop-shadow(0 1px 1px #0008)}
+.card.joker{--suit:#6c3fb8;background:linear-gradient(155deg,#fff 0%,#f1e9ff 55%,#dccbf6 100%)}
+.card.back{background:#2c1252;box-shadow:0 0 0 1px rgba(15,5,35,.75),0 3px 8px rgba(0,0,0,.45)}
 .card.sel{transform:translateY(-.55em);box-shadow:0 0 0 2px #fff,0 0 0 4px var(--gold),0 10px 20px rgba(0,0,0,.5)}
 .card.sel.wild{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--gold),0 0 18px rgba(233,185,73,.8),0 10px 20px rgba(0,0,0,.5)}
 .card.fresh{animation:pop .5s cubic-bezier(.2,.9,.3,1.2)}
@@ -115,7 +99,6 @@ button{font:inherit;color:inherit}
 .fan{grid-column:1/-1;min-width:0;max-width:100%;overflow:hidden;display:flex;height:calc(24px*1.42 + 4px);align-items:center;margin-top:5px;padding-left:2px}
 .fan .card{--cw:22px;box-shadow:0 0 0 1px rgba(15,5,35,.7),0 1px 3px #0007}
 .fan .card+.card{margin-left:calc(min(11px, 94px / var(--n, 10)) - 22px)}
-.fan .card .ico{width:1.2em;height:1.2em}
 .fan .cnt{margin-left:8px;font-size:.74rem;color:var(--mute);white-space:nowrap}
 .tot .k{display:none}
 .tot .k::after{content:"";display:inline-block;width:7px;height:10px;margin-left:3px;border-radius:2px;background:linear-gradient(#8a46bd,#4b2279);box-shadow:0 0 0 1px #fbe08a88;vertical-align:-1px}
@@ -134,8 +117,8 @@ button{font:inherit;color:inherit}
 .stack{position:relative;--cw:clamp(58px,min(9.5vw,14.5vh),128px);display:flex;flex-direction:column;align-items:center;gap:8px;cursor:default}
 .stack .slot{position:relative;width:var(--cw);height:calc(var(--cw)*1.42)}
 .stack .slot .card{position:absolute;inset:0}
-.stack .slot .card:nth-child(1){transform:translate(-3px,3px)}
-.stack .slot .card:nth-child(2){transform:translate(-1.5px,1.5px)}
+#pile .slot .card:nth-child(1){transform:translate(-3px,3px)}
+#pile .slot .card:nth-child(2){transform:translate(-1.5px,1.5px)}
 .stack .lbl{font-size:.78rem;color:var(--mute);letter-spacing:.04em}
 .stack .empty{position:absolute;inset:0;border-radius:calc(var(--cw)*.105);border:2px dashed rgba(255,255,255,.25)}
 .stack.hot{cursor:pointer}
@@ -187,7 +170,7 @@ table.sc td:first-child,table.sc th:first-child{text-align:left}
 table.sc tr.tot td{font-weight:800;border-top:2px solid var(--line);font-size:1rem}
 table.sc td.best{color:var(--green)}
 table.sc td.zero{color:var(--green);font-weight:700}
-.res{display:grid;grid-template-columns:150px 1fr 90px;gap:12px;align-items:center;padding:10px 6px;border-bottom:1px solid rgba(255,255,255,.08);--cw:34px}
+.res{display:grid;grid-template-columns:150px 1fr 90px;gap:12px;align-items:center;padding:10px 6px;border-bottom:1px solid rgba(255,255,255,.08);--cw:42px}
 .res.won{background:linear-gradient(90deg,rgba(88,194,125,.18),transparent)}
 .res .who{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .res .who em{font-size:.68rem;font-style:normal;color:var(--green);font-weight:700;width:100%}
@@ -447,6 +430,149 @@ const ico = (id, cls = '') => `<svg class="ico ${cls}" aria-hidden="true"><use h
 const BOTS = ['Camille', 'Hugo', 'Léa', 'Noé', 'Inès', 'Jules'];
 const HUES = [42, 205, 340, 150, 270, 20, 185];
 
+/* ---------- Illustrations des cartes (SVG, définies une seule fois puis réutilisées) ---------- */
+const SKIN = ['#f2c9a3', '#c98f63', '#8c5a3c', '#e8b78d', '#6d4429'];
+const HAIR = ['#3a281c', '#d8d2c4', '#8a4a20', '#17171a', '#c9a227'];
+const ROBE = ['#d08a08', '#26376a', '#b8222c', '#2b7cc8', '#2b8c4b'];
+const ROBE2 = ['#8a5a00', '#0f1a38', '#7a121b', '#174e88', '#1a5f31'];
+const TINT = ['#fff0c4', '#e1e8f8', '#fbe0e0', '#dcebfb', '#dff3e5'];
+
+/* Buste d'une figure, origine = milieu de la base, y négatif vers le haut (≈ 55 de haut) */
+function figure(r, s) {
+  const sk = SKIN[(s * 2 + r) % 5];
+  let hr = HAIR[(s * 3 + r + 1) % 5]; if (hr === sk) hr = '#2a1c14';
+  const rb = ROBE[s], rd = ROBE2[s], gold = 'url(#gGold)';
+  let g = '';
+  if (r === 12) g += `<path d="M-9.5 -31C-15 -21-12.5 -10-18 -1L-6 -8C-6 -16-8 -22-8.5 -29Z M9.5 -31C15 -21 12.5 -10 18 -1L6 -8C6 -16 8 -22 8.5 -29Z" fill="${hr}"/>`;
+  g += `<path d="M-26 0C-26 -11-18 -17-9 -18L9 -18C18 -17 26 -11 26 0Z" fill="${rb}" stroke="${rd}" stroke-width=".8"/>`;
+  g += `<path d="M-26 0C-26 -11-18 -17-9 -18L-9 0Z" fill="#fff" opacity=".1"/>`;
+  g += `<path d="M-26 0C-26 -11-18 -17-9 -18L9 -18C18 -17 26 -11 26 0" fill="none" stroke="${gold}" stroke-width="2.4"/>`;
+  g += `<path d="M-25 -4H25" stroke="${gold}" stroke-width="1.1" opacity=".85"/>`;
+  g += `<path d="M-10 -18L0 -6 10 -18Z" fill="#fff6e0" stroke="${rd}" stroke-width=".7"/>`;
+  g += `<rect x="-4.2" y="-24" width="8.4" height="8" rx="2" fill="${sk}"/><path d="M-4.2 -22Q0 -18.5 4.2 -22V-24H-4.2Z" fill="#000" opacity=".13"/>`;
+  g += `<circle cx="-8.7" cy="-30" r="2" fill="${sk}"/><circle cx="8.7" cy="-30" r="2" fill="${sk}"/>`;
+  g += `<ellipse cx="0" cy="-30" rx="8.7" ry="10" fill="${sk}"/>`;
+  g += `<circle cx="-4.7" cy="-26.5" r="1.9" fill="#e8736a" opacity=".3"/><circle cx="4.7" cy="-26.5" r="1.9" fill="#e8736a" opacity=".3"/>`;
+  if (r === 13) g += `<path d="M-9.4 -30C-10.8 -45 10.8 -45 9.4 -30C7 -37-7 -37-9.4 -30Z" fill="${hr}"/>`;
+  if (r === 12) g += `<path d="M-9.6 -29C-11.2 -46 11.2 -46 9.6 -29C8 -35-8 -35-9.6 -29Z" fill="${hr}"/>`;
+  if (r === 11) g += `<path d="M-9 -30C-10.6 -37-9 -38-7 -38C-8 -34-8 -32-8.6 -30Z M9 -30C10.6 -37 9 -38 7 -38C8 -34 8 -32 8.6 -30Z" fill="${hr}"/>`;
+  g += `<circle cx="-3.4" cy="-31" r="1" fill="#1d120c"/><circle cx="3.4" cy="-31" r="1" fill="#1d120c"/>`;
+  g += `<path d="M-5.3 -33.6Q-3.4 -34.7-1.7 -33.6M1.7 -33.6Q3.4 -34.7 5.3 -33.6" stroke="${hr}" stroke-width=".95" fill="none" stroke-linecap="round"/>`;
+  g += `<path d="M0 -31L-1.1 -27.3Q0 -26.5 1.1 -27.3" stroke="#000" stroke-opacity=".28" stroke-width=".7" fill="none"/>`;
+  if (r === 13) {
+    g += `<path d="M-8.8 -30C-10 -15-3 -12 0 -12C3 -12 10 -15 8.8 -30C7 -24 4 -22.5 0 -22.5C-4 -22.5-7 -24-8.8 -30Z" fill="${hr}"/>`;
+    g += `<path d="M-5.6 -26Q-2.6 -28.7 0 -26.6Q2.6 -28.7 5.6 -26Q2.6 -24 0 -25Q-2.6 -24-5.6 -26Z" fill="${hr}"/>`;
+    g += `<path d="M-9 -37L-10.5 -50L-5 -44.5L0 -54L5 -44.5L10.5 -50L9 -37Z" fill="${gold}" stroke="#7a5200" stroke-width=".8" stroke-linejoin="round"/>`;
+    g += `<rect x="-9.2" y="-40" width="18.4" height="3.8" rx="1" fill="${gold}" stroke="#7a5200" stroke-width=".7"/>`;
+    g += `<circle cx="-5.2" cy="-38.1" r="1.05" fill="#d1242f"/><circle cx="5.2" cy="-38.1" r="1.05" fill="#2b7cc8"/><use href="#i-su${s}" x="-1.9" y="-40" width="3.8" height="3.8" fill="currentColor" color="${rb}"/>`;
+    g += `<circle cx="-10.5" cy="-50.5" r="1.4" fill="${gold}" stroke="#7a5200" stroke-width=".4"/><circle cx="0" cy="-54.6" r="1.5" fill="${gold}" stroke="#7a5200" stroke-width=".4"/><circle cx="10.5" cy="-50.5" r="1.4" fill="${gold}" stroke="#7a5200" stroke-width=".4"/>`;
+  } else {
+    const lip = r === 12 ? `<path d="M-3 -24.2Q0 -26 3 -24.2Q0 -21.6-3 -24.2Z" fill="#c4363a"/>` : `<path d="M-2.8 -24.2Q0 -22.2 2.8 -24.2" stroke="#8a2f28" stroke-width="1" fill="none" stroke-linecap="round"/>`;
+    g += lip;
+  }
+  if (r === 12) {
+    g += `<circle cx="-9.2" cy="-25" r="1.25" fill="${gold}"/><circle cx="9.2" cy="-25" r="1.25" fill="${gold}"/>`;
+    g += `<path d="M-8.6 -38L-8.6 -44.5L-4.3 -41.3L0 -48.5L4.3 -41.3L8.6 -44.5L8.6 -38Z" fill="${gold}" stroke="#7a5200" stroke-width=".8" stroke-linejoin="round"/>`;
+    g += `<rect x="-8.8" y="-40.4" width="17.6" height="3.2" rx="1.2" fill="${gold}" stroke="#7a5200" stroke-width=".7"/><use href="#i-su${s}" x="-1.8" y="-40.3" width="3.6" height="3.6" fill="currentColor" color="${rb}"/>`;
+    g += `<circle cx="-8.6" cy="-45" r="1.25" fill="#fff" stroke="#b8a070" stroke-width=".4"/><circle cx="0" cy="-49" r="1.35" fill="#fff" stroke="#b8a070" stroke-width=".4"/><circle cx="8.6" cy="-45" r="1.25" fill="#fff" stroke="#b8a070" stroke-width=".4"/>`;
+  }
+  if (r === 11) {
+    g += `<path d="M-9.6 -34C-12.5 -47 6 -53 13 -44C10 -42 7 -40 9.6 -34Z" fill="${rb}" stroke="${rd}" stroke-width=".8"/>`;
+    g += `<path d="M-9.8 -35C-3 -32.4 5 -32.4 9.8 -35L9.8 -38.4C5 -35.8-3 -35.8-9.8 -38.4Z" fill="${gold}" stroke="#7a5200" stroke-width=".6"/>`;
+    g += `<path d="M8.5 -44C14 -49 18.5 -53 21.5 -59C15.5 -57 9.5 -52 8.5 -44Z" fill="#fff6e0" stroke="${rd}" stroke-width=".6"/><path d="M9 -45C14 -50 17 -54 20 -58" stroke="${rd}" stroke-width=".5" fill="none"/>`;
+  }
+  return g;
+}
+function courtSymbol(r, s) {
+  const half = `<g clip-path="url(#cpTop)"><g transform="translate(50 71) scale(.95)">${figure(r, s)}</g></g>`;
+  return `<symbol id="ct-${r}-${s}" viewBox="0 0 100 142">
+    <rect x="24" y="12" width="52" height="118" rx="5.500" fill="${TINT[s]}" stroke="${ROBE2[s]}" stroke-opacity=".55" stroke-width=".9"/>
+    ${half}<g transform="rotate(180 50 71)">${half}</g>
+    <rect x="26.5" y="14.5" width="47" height="113" rx="4" fill="none" stroke="url(#gGold)" stroke-width="1"/>
+    <path d="M26.5 71H73.5" stroke="url(#gGold)" stroke-width="1.3"/>
+    <rect x="45.8" y="66.8" width="8.4" height="8.4" rx="1" transform="rotate(45 50 71)" fill="#fff6e0" stroke="#7a5200" stroke-width=".7"/>
+    <use href="#i-su${s}" x="46.5" y="67.5" width="7" height="7" fill="currentColor" color="${ROBE[s]}"/></symbol>`;
+}
+function jokerSymbol() {
+  let ruff = ''; for (let i = 0; i < 7; i++) ruff += `<circle cx="${34.5 + i * 5.2}" cy="${100.5 + (i % 2) * 1.6}" r="4.3" fill="${i % 2 ? '#fff6e0' : '#f2c230'}" stroke="#9a7208" stroke-width=".6"/>`;
+  const bell = (x, y) => `<circle cx="${x}" cy="${y}" r="3.4" fill="url(#gGold)" stroke="#7a5200" stroke-width=".7"/><circle cx="${x - 1}" cy="${y - 1}" r=".9" fill="#fff" opacity=".8"/>`;
+  return `<symbol id="jk" viewBox="0 0 100 142">
+    <rect x="24" y="14" width="52" height="114" rx="6" fill="url(#gJk)" stroke="#6c3fb8" stroke-opacity=".6" stroke-width=".9"/>
+    <rect x="24" y="14" width="52" height="114" rx="6" fill="url(#pLat)"/>
+    <g clip-path="url(#cpJk)">
+      <path d="M22 128C23 110 36 102 50 102C64 102 77 110 78 128Z" fill="#d73a4a"/><path d="M50 102C64 102 77 110 78 128H50Z" fill="#2b7cc8"/>
+      ${ruff}
+      <path d="M38 66C33 60 28.500 50 28.500 40C37 45 43 52 47 62Z" fill="#d73a4a" stroke="#7a1520" stroke-width=".7"/>
+      <path d="M62 66C67 60 71.500 50 71.500 40C63 45 57 52 53 62Z" fill="#2b7cc8" stroke="#154f86" stroke-width=".7"/>
+      <path d="M44 63C46 52 50 44 50 33C50 44 54 52 56 63Z" fill="#f2c230" stroke="#9a7208" stroke-width=".7"/>
+      ${bell(28.5, 39)}${bell(71.5, 39)}${bell(50, 31.5)}
+      <ellipse cx="50" cy="75" rx="12.5" ry="14" fill="#f6d2b0" stroke="#c79a78" stroke-width=".6"/>
+      <path d="M36.500 65C44 61 56 61 63.500 65L63.500 70C56 66 44 66 36.500 70Z" fill="#6c3fb8" stroke="#3d1f78" stroke-width=".6"/>
+      <circle cx="43" cy="66.500" r="1.1" fill="#f2c230"/><circle cx="50" cy="65" r="1.1" fill="#f2c230"/><circle cx="57" cy="66.500" r="1.1" fill="#f2c230"/>
+      <circle cx="42.700" cy="79.500" r="2.600" fill="#ff8a80" opacity=".45"/><circle cx="57.300" cy="79.500" r="2.600" fill="#ff8a80" opacity=".45"/>
+      <ellipse cx="45.200" cy="74" rx="1.500" ry="2" fill="#1d120c"/><ellipse cx="54.800" cy="74" rx="1.500" ry="2" fill="#1d120c"/>
+      <path d="M42.200 70.600Q45 68.800 47.600 70.200M52.400 70.200Q55 68.800 57.800 70.600" stroke="#5a2d12" stroke-width=".9" fill="none" stroke-linecap="round"/>
+      <circle cx="50" cy="78" r="2.500" fill="#d73a4a"/><circle cx="49.200" cy="77.200" r=".7" fill="#fff" opacity=".7"/>
+      <path d="M43 82Q50 90.500 57 82Q50 86 43 82Z" fill="#9c2230"/>
+    </g>
+    <rect x="31" y="113" width="38" height="11" rx="5.500" fill="#fff" stroke="#6c3fb8" stroke-width=".8"/>
+    <text x="50" y="121" text-anchor="middle" style="font:800 8px ui-sans-serif,system-ui,sans-serif;letter-spacing:1.6px" fill="#6c3fb8">JOKER</text></symbol>`;
+}
+function backSymbol() {
+  const suits = [0, 1, 2, 3, 4].map(k => { const a = (-90 + 72 * k) * Math.PI / 180, x = 50 + 33 * Math.cos(a), y = 71 + 33 * Math.sin(a);
+    return `<use href="#i-su${k}" x="${(x - 6.5).toFixed(1)}" y="${(y - 6.5).toFixed(1)}" width="13" height="13" fill="currentColor" color="${['#f2c230', '#c9d6ff', '#ff6a74', '#58b0ff', '#5fdc8a'][k]}" opacity=".95"/>`; }).join('');
+  return `<symbol id="bk" viewBox="0 0 100 142">
+    <rect width="100" height="142" rx="9" fill="url(#gBack)"/>
+    <rect width="100" height="142" rx="9" fill="url(#pBack)"/>
+    <rect x="5" y="5" width="90" height="132" rx="6" fill="none" stroke="url(#gGold)" stroke-width="1.4"/>
+    <rect x="9" y="9" width="82" height="124" rx="4" fill="none" stroke="#fbe08a" stroke-opacity=".45" stroke-width=".7"/>
+    <circle cx="50" cy="71" r="23" fill="#2c1252" stroke="url(#gGold)" stroke-width="1.6"/>
+    <circle cx="50" cy="71" r="18.500" fill="none" stroke="#fbe08a" stroke-opacity=".4" stroke-width=".6"/>
+    ${suits}<use href="#i-crown" x="38" y="59" width="24" height="24" fill="currentColor" color="#f2c230"/></symbol>`;
+}
+function buildArt() {
+  const defs = `<linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff2b0"/><stop offset=".5" stop-color="#e5ac2a"/><stop offset="1" stop-color="#b07d10"/></linearGradient>
+    <linearGradient id="gJk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf6ff"/><stop offset="1" stop-color="#d6c3f5"/></linearGradient>
+    <linearGradient id="gBack" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a46bd"/><stop offset=".55" stop-color="#4b2279"/><stop offset="1" stop-color="#2a1050"/></linearGradient>
+    <pattern id="pLat" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0H9M0 0V9" stroke="#6c3fb8" stroke-opacity=".13" stroke-width=".8"/></pattern>
+    <pattern id="pBack" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0H8M0 0V8" stroke="#fbe08a" stroke-opacity=".12" stroke-width=".7"/></pattern>
+    <clipPath id="cpTop"><rect x="26.5" y="14.5" width="47" height="56.500"/></clipPath>
+    <clipPath id="cpJk"><rect x="24" y="14" width="52" height="99" rx="6"/></clipPath>`;
+  let sym = jokerSymbol() + backSymbol();
+  for (const r of [11, 12, 13]) for (let s = 0; s < 5; s++) sym += courtSymbol(r, s);
+  document.body.insertAdjacentHTML('afterbegin', `<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>${defs}${sym}</defs></svg>`);
+}
+buildArt();
+
+/* Disposition traditionnelle des symboles (cartes 3 à 10) : ceux du bas sont à l'envers */
+const ROW4 = [31, 57.67, 84.33, 111], PXS = { L: 37, C: 50, R: 63 };
+const SIDES = ys => ys.flatMap(y => [['L', y], ['R', y]]);
+const PIPS = {
+  3: [['C', 31], ['C', 71], ['C', 111]],
+  4: SIDES([31, 111]),
+  5: [...SIDES([31, 111]), ['C', 71]],
+  6: SIDES([31, 71, 111]),
+  7: [...SIDES([31, 71, 111]), ['C', 51]],
+  8: [...SIDES([31, 71, 111]), ['C', 51], ['C', 91]],
+  9: [...SIDES(ROW4), ['C', 71]],
+  10: [...SIDES(ROW4), ['C', 44.33], ['C', 97.67]]
+};
+function pipsSVG(v, s) {
+  const sz = v <= 6 ? 25 : v <= 8 ? 22 : 19;
+  return PIPS[v].map(([c, y]) => { const x = PXS[c];
+    return `<use href="#i-su${s}" class="pip" x="${x - sz / 2}" y="${(y - sz / 2).toFixed(2)}" width="${sz}" height="${sz}"${y > 71 ? ` transform="rotate(180 ${x} ${y})"` : ''}/>`; }).join('');
+}
+function faceSVG(c) {
+  if (c.s < 0) {
+    const hat = `<use href="#i-hat" x="5" y="9" width="17" height="17" fill="currentColor" color="#7a46cc"/>`;
+    return `<svg class="cf" viewBox="0 0 100 142" aria-hidden="true"><use href="#jk"/>${hat}<g transform="rotate(180 50 71)">${hat}</g></svg>`;
+  }
+  const r = rk(c.v), fs = c.v === 10 ? 'font-size:19px;letter-spacing:-1px' : '';
+  const corner = `<text x="14" y="26" text-anchor="middle" class="rk" style="${fs}">${r}</text><use href="#i-su${c.s}" class="pip" x="6.5" y="30" width="15" height="15"/>`;
+  const body = c.v >= 11 ? `<use href="#ct-${c.v}-${c.s}"/>` : pipsSVG(c.v, c.s);
+  return `<svg class="cf" viewBox="0 0 100 142" aria-hidden="true"><rect x="2.800" y="2.800" width="94.400" height="136.400" rx="7.500" fill="none" stroke="var(--edge)" stroke-opacity=".17" stroke-width=".8"/>${body}<g>${corner}</g><g transform="rotate(180 50 71)">${corner}</g></svg>`;
+}
+
 function cardHTML(c, a, o = {}) {
   const wild = isWild(c, a);
   const cls = ['card'];
@@ -458,18 +584,10 @@ function cardHTML(c, a, o = {}) {
   const okb = o.out ? '<i class="okb" title="Défausser cette carte permet de poser votre main">✓</i>' : '';
   const tab = o.tab ? ' tabindex="0"' : '';
   const label = c.s < 0 ? 'Joker' : `${rk(c.v)} ${SUITN[c.s]}`;
-  if (c.s < 0) return `<div class="${cls.join(' ')}" data-id="${c.id}" role="img" aria-label="${label}"${tab}>
-    <div class="corner">${ico('i-hat')}</div><div class="corner br">${ico('i-hat')}</div>
-    <div class="mid">${ico('i-hat', 'big')}</div><div class="jl">JOKER</div>${as}${okb}</div>`;
-  const face = c.v >= 11;
-  const rib = c.v === a ? '<i class="rib">ATOUT</i>' : '';
-  const crown = c.v === 13 ? ico('i-crown', 'crown') : c.v === 12 ? ico('i-crown', 'crown q') : '';
-  return `<div class="${cls.join(' ')}" data-id="${c.id}" role="img" aria-label="${label}"${tab}>
-    <div class="corner"><span>${rk(c.v)}</span>${ico('i-su' + c.s)}</div>
-    <div class="corner br"><span>${rk(c.v)}</span>${ico('i-su' + c.s)}</div>
-    <div class="mid ${face ? 'face' : ''}">${face ? `<span class="wm">${rk(c.v)}</span>` : ''}${crown}${ico('i-su' + c.s, 'big')}</div>${rib}${as}${okb}</div>`;
+  const rib = c.s >= 0 && c.v === a ? '<i class="rib">ATOUT</i>' : '';
+  return `<div class="${cls.join(' ')}" data-id="${c.id}" role="img" aria-label="${label}"${tab}>${faceSVG(c)}${rib}${as}${okb}</div>`;
 }
-const backHTML = () => `<div class="card back">${ico('i-crown')}</div>`;
+const backHTML = () => `<div class="card back"><svg class="cf" viewBox="0 0 100 142" aria-hidden="true"><use href="#bk"/></svg></div>`;
 
 /* ---------- Réglages ---------- */
 let S = { bots: 3, skill: 'hard', start: 1, mode: 'normal' };
