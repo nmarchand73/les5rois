@@ -5,6 +5,7 @@ inspiré de *Les Cinq Rois* / *Five Crowns* (règles Gigamic, édition 03-2018).
 Projet de fan non officiel : aucune illustration ni marque de l'éditeur n'est utilisée.
 
 Une seule page, **sans dépendance** : ouvrez `index.html` dans un navigateur.
+Publiée automatiquement sur **GitHub Pages** par GitHub Actions (`.github/workflows/pages.yml`) à chaque push sur `main`, après passage des tests.
 
 ## Modes
 - **Partie** : vous contre 1 à 6 bots (niveau Débutant ou Expert), partie complète ou « express » (manche de départ au choix).
